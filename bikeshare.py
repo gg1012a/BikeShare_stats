@@ -173,9 +173,9 @@ def user_stats(df):
 
     try:
         print('\nBirth Year Breakdown:')
-        oldest = int(df['Birth Year'].min())
-        youngest = int(df['Birth Year'].max())
-        most_common_age = int(df['Birth Year'].mode()[0])
+        oldest_user = int(df['Birth Year'].min())
+        youngest_user = int(df['Birth Year'].max())
+        user_most_common_age = int(df['Birth Year'].mode()[0])
         print('Oldest: {} \nYoungest: {} \nMost Common Birth Year: {}'.format(oldest, youngest, most_common_age))
     except KeyError:
         print('There is no birth year data available for this city.')
@@ -200,11 +200,11 @@ def main():
                 row_count += 5
 
         time_stats(df)
-        time.sleep(5)
+        time.sleep(3)
         station_stats(df)
-        time.sleep(5)
+        time.sleep(3)
         trip_duration_stats(df)
-        time.sleep(5)
+        time.sleep(3)
         user_stats(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
