@@ -185,6 +185,7 @@ def user_stats(df):
 
 
 def main():
+    """Main program function. Calls on the get_filter, load_data, time_stats, station_stats, trip_duration_stats, user_stats functions to generate stats."""
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
