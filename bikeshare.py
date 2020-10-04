@@ -199,11 +199,11 @@ def main():
                 row_count += 5
 
         time_stats(df)
-        time.sleep(5)
+        time.sleep(3)
         station_stats(df)
-        time.sleep(5)
+        time.sleep(3)
         trip_duration_stats(df)
-        time.sleep(5)
+        time.sleep(3)
         user_stats(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
