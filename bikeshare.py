@@ -173,9 +173,9 @@ def user_stats(df):
 
     try:
         print('\nBirth Year Breakdown:')
-        oldest = int(df['Birth Year'].min())
-        youngest = int(df['Birth Year'].max())
-        most_common_age = int(df['Birth Year'].mode()[0])
+        oldest_user = int(df['Birth Year'].min())
+        youngest_user = int(df['Birth Year'].max())
+        user_most_common_age = int(df['Birth Year'].mode()[0])
         print('Oldest: {} \nYoungest: {} \nMost Common Birth Year: {}'.format(oldest, youngest, most_common_age))
     except KeyError:
         print('There is no birth year data available for this city.')
